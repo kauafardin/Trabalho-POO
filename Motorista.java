@@ -45,7 +45,7 @@ public class Motorista {
 
     @Override
     public String toString(){
-        return " Nome: " + nome + "\n ID: " + id + "\n CNH: " + cnh + "\n Nível de Experiência: " + nivelExperiencia;
+        return " Nome: " + nome + "\n ID: " + id + "\n CNH: " + cnh + "\n Nível de Experiência: " + nivelExperiencia + "\n";
     }
     
 }
