@@ -46,7 +46,7 @@ public class Eletroposto {
     @Override
     public String toString() {
         return " ID: " + id + "\n Local: " + localizacao + "\n Vagas disponíveis: " + vagasCarregamento +
-               "\n Tempo médio de carregamento: " + TMCarregamento + " horas";
+               "\n Tempo médio de carregamento: " + TMCarregamento + " horas\n";
     }
 
     public void ocuparVaga() {
@@ -57,6 +57,15 @@ public class Eletroposto {
 
     public void liberarVaga() {
         vagasCarregamento++;
+    }
+
+    public void recarregar(CarroEletrico carro) {
+        // Aumenta a autonomia do carro para o máximo possível
+        double cargaNecessaria = carro.getCapacidadeBateria() - carro.getAutonomia();
+        
+        // Atualiza a autonomia do carro
+        carro.setAutonomia(carro.getAutonomia() + cargaNecessaria);
+        System.out.println("Carro recarregado. Nova autonomia: " + carro.getAutonomia() + " km.");
     }
 
 }
