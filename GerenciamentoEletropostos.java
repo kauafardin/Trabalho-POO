@@ -17,6 +17,12 @@ public class GerenciamentoEletropostos {
     }
 
     public void registrarEletroposto(Eletroposto eletroposto){
+        for (Eletroposto e : eletropostos) {
+            if (e.getId() == eletroposto.getId()) {
+                System.out.println("Erro: Já existe um veículo com o ID " + eletroposto.getId());
+                return;
+            }
+        }
         if (eletroposto == null){
             System.out.println("Eletroposto inexistente!");
         } else{
