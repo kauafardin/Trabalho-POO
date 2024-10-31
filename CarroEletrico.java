@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class CarroEletrico{
     protected int id;
     protected String marca;
@@ -8,7 +5,7 @@ public class CarroEletrico{
     protected int anoFabricacao;
     protected double capacidadeBateria;
     protected double autonomiaMax;
-    private List<CarregamentoBateria> historicoCarregamentos;
+    
 
     public CarroEletrico(int id, String marca, String modelo, int anoFabricacao, double capacidadeBateria, double autonomiaMax) {
         this.id = id;
@@ -17,7 +14,6 @@ public class CarroEletrico{
         this.anoFabricacao = anoFabricacao;
         this.capacidadeBateria = capacidadeBateria;
         this.autonomiaMax = autonomiaMax;
-        this.historicoCarregamentos = new ArrayList<>();
     }
 
     public int getId() {
@@ -68,19 +64,10 @@ public class CarroEletrico{
         this.autonomiaMax = autonomiaMax;
     }
 
-
-    public List<CarregamentoBateria> getHistoricoCarregamentos() {
-        return historicoCarregamentos;
-    }
-
-    public void setHistoricoCarregamentos(List<CarregamentoBateria> historicoCarregamentos) {
-        this.historicoCarregamentos = historicoCarregamentos;
-    }
-
     @Override
     public String toString() {
         return " ID: " + id + "\n Marca: " + marca + "\n Modelo: " + modelo + "\n Ano: " + anoFabricacao
-                + "\n Capacidade: " + capacidadeBateria + " kWh\n Autonomia: " + autonomiaMax + " km";
+                + "\n Capacidade: " + capacidadeBateria + " kWh\n Autonomia: " + autonomiaMax + " km\n";
     }
 
 }
