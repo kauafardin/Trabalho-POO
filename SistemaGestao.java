@@ -6,7 +6,5 @@ public class SistemaGestao {
         GerenciamentoFrota gerenciamentoFrota = new GerenciamentoFrota();
         gerenciamentoFrota.interagirComUsuario();
 
-
-      
     }
 }
