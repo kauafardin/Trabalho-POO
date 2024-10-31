@@ -1,5 +1,5 @@
 import java.util.List;
-
+ 
 public class Relatorio {
     private List<CarroEletrico> veiculos;
     private List<Viagem> viagens;
